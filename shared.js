@@ -25,7 +25,7 @@ const closeModal = () => {
   //   backDrop.style.display = "none";
   //   modal.style.display = "none";
   backDrop.classList.remove("open");
-  modal.classList.remove("open");
+  if (modal) modal.classList.remove("open");
 };
 
 backDrop.addEventListener("click", () => {
@@ -34,7 +34,7 @@ backDrop.addEventListener("click", () => {
   closeModal();
 });
 
-modalNoButton.addEventListener("click", closeModal);
+if (modalNoButton) modalNoButton.addEventListener("click", closeModal);
 
 toggleButton.addEventListener("click", () => {
   //   mobileNav.style.display = "block";
