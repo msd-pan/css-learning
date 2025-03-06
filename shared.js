@@ -7,6 +7,8 @@ const selectPlanButton = document.querySelectorAll(".plan button");
 const toggleButton = document.querySelector(".toggle-button");
 const mobileNav = document.querySelector(".mobile-nav");
 
+// console.log(backDrop.style["background-image"]);
+
 // console.log(modalNoButton);
 
 selectPlanButton.forEach((button) => {
