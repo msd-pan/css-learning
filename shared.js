@@ -11,24 +11,32 @@ const mobileNav = document.querySelector(".mobile-nav");
 
 selectPlanButton.forEach((button) => {
   button.addEventListener("click", () => {
-    backDrop.style.display = "block";
-    modal.style.display = "block";
+    // backDrop.style.display = "block";
+    // modal.style.display = "block";
+    // modal.className = "open"; // This will actually overwrite the complete class list
+    backDrop.classList.add("open");
+    modal.classList.add("open");
   });
 });
 
 const closeModal = () => {
-  backDrop.style.display = "none";
-  modal.style.display = "none";
+  //   backDrop.style.display = "none";
+  //   modal.style.display = "none";
+  backDrop.classList.remove("open");
+  modal.classList.remove("open");
 };
 
 backDrop.addEventListener("click", () => {
-  mobileNav.style.display = "none";
+  //   mobileNav.style.display = "none";
+  mobileNav.classList.remove("open");
   closeModal();
 });
 
 modalNoButton.addEventListener("click", closeModal);
 
 toggleButton.addEventListener("click", () => {
-  mobileNav.style.display = "block";
-  backDrop.style.display = "block";
+  //   mobileNav.style.display = "block";
+  //   backDrop.style.display = "block";
+  mobileNav.classList.add("open");
+  backDrop.classList.add("open");
 });
