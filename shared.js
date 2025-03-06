@@ -4,6 +4,8 @@ const modalNoButton = document.querySelector(
   ".modal__action.modal__action--negative"
 );
 const selectPlanButton = document.querySelectorAll(".plan button");
+const toggleButton = document.querySelector(".toggle-button");
+const mobileNav = document.querySelector(".mobile-nav");
 
 // console.log(modalNoButton);
 
@@ -19,6 +21,14 @@ const closeModal = () => {
   modal.style.display = "none";
 };
 
-backDrop.addEventListener("click", closeModal);
+backDrop.addEventListener("click", () => {
+  mobileNav.style.display = "none";
+  closeModal();
+});
 
 modalNoButton.addEventListener("click", closeModal);
+
+toggleButton.addEventListener("click", () => {
+  mobileNav.style.display = "block";
+  backDrop.style.display = "block";
+});
