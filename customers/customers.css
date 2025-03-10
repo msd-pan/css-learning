@@ -57,6 +57,7 @@ main {
 
 .testimonial__text {
   margin: 0.2rem;
+  font-stretch: extra-condensed;
 }
 
 @media (min-width: 40rem) {
