@@ -1,4 +1,9 @@
-@import "typography.css";
+.char-highlight {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #33b48d;
+}
+
 html {
   font-size: 94.75%;
 }
