@@ -40,7 +40,7 @@ body {
 
 .sass-section {
   border: $border-default;
-  background: lighten($color: map-get($colors, main), $amount: 72%);
+  background: lighten($color: map-get($map: $colors, $key: main), $amount: 72%);
   padding: $size-default;
   text-align: center;
   box-shadow: $size-tiny $size-tiny $size-tiny / 2 #ccc;
@@ -54,10 +54,9 @@ body {
 .sass-introduction {
   @extend .sass-section;
   padding: $size-default * 2;
-}
-
-.sass-introduction p {
-  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
 .sass-details {
@@ -67,10 +66,9 @@ body {
 
 .section-header {
   border-bottom: $border-default;
-}
-
-.section-header h1 {
-  margin: 0 0 $size-default 0;
+  h1 {
+    margin: 0 0 $size-default 0;
+  }
 }
 
 .documentation-links {
@@ -91,12 +89,12 @@ body {
     display: block;
     padding: $size-tiny;
     border: $border-default;
-  }
 
-  .documentation-link:hover,
-  .documentation-link:active {
-    color: white;
-    background: #fa923f;
-    border-color: #fa923f;
+    &:hover,
+    &:active {
+      color: white;
+      background: #fa923f;
+      border-color: #fa923f;
+    }
   }
 }
