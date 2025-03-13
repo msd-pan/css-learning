@@ -17,7 +17,8 @@ selectPlanButton.forEach((button) => {
     // modal.style.display = "block";
     // modal.className = "open"; // This will actually overwrite the complete class list
     backDrop.classList.add("open");
-    modal.classList.add("open");
+    backDrop.style.display = "block";
+    setTimeout(() => modal.classList.add("open"), 10);
   });
 });
 
@@ -26,6 +27,7 @@ const closeModal = () => {
   //   modal.style.display = "none";
   backDrop.classList.remove("open");
   if (modal) modal.classList.remove("open");
+  setTimeout(() => (backDrop.style.display = "none"), 200);
 };
 
 backDrop.addEventListener("click", () => {
@@ -41,4 +43,5 @@ toggleButton.addEventListener("click", () => {
   //   backDrop.style.display = "block";
   mobileNav.classList.add("open");
   backDrop.classList.add("open");
+  setTimeout(() => backDrop.classList.add("open"), 10);
 });
